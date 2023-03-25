@@ -20,9 +20,11 @@ npm run dev
 
 . . . from the terminal in the project folder, the app will launch in a localhost port.  The app works best when it's in full-screen mode in a 16:9 aspect ratio, though it also works as narrow as 12:9 (4:3), or as wide as 18:9 (2:1)
 
-The one-page app begins with the headline text on top and bottom.  The top is cenetered (because of a spotlight graphic that will apear later), while the bottom is flush left to accomodate the picture-in-picture in the lower right corner for the livestream videoconferencing platform (we used Restream).
+⭐️ The one-page app begins with the headline text on top and bottom.  The top is cenetered (because of a spotlight graphic that will apear later), while the bottom is flush left to accomodate the picture-in-picture in the lower right corner for the livestream videoconferencing platform (we used Restream).
+![openingscreen](https://user-images.githubusercontent.com/76451364/227739747-ccd2778c-de5b-4859-873d-d42c62f70731.png)
 
 ⭐️ From the opening screen, click the large logo in the center.  This will replace that large logo with the ListModular component containing both lists, the spotlight graphic and a staging area in the center that will house the dominant photo/image on the page.
+![listsbegin](https://user-images.githubusercontent.com/76451364/227739756-8cf491ce-245b-410e-9299-1cc25c52604d.png)
 
 The five list tems in each list should appear as plain rectangles.  All list items begin in "hide" mode, with the text invisible (it's there, but it's the same color as the background).
 
@@ -33,10 +35,12 @@ The five list tems in each list should appear as plain rectangles.  All list ite
     2. The photo/image associated with that list item will appear in the center.
 
     3. This list item will be the "active" item and will appear larger.
+![itemunhide](https://user-images.githubusercontent.com/76451364/227739981-0ad6933e-9566-41bb-aaac-c5533fd466d3.png)
 
         a. If a list item in "unhide" mode in the opposite list matches the active item, then each list item will appear larger.
 
         b. All other "unhide" list items will be considered "inactive" and will change to standard size while remaining in "unhide" mode.
+![doubleactive](https://user-images.githubusercontent.com/76451364/227739894-150c7bc7-7cf8-405e-830e-640b726277ad.png)
 
 ⭐️ If you click on a list item that's in "unhide" mode:
 
@@ -51,6 +55,7 @@ The five list tems in each list should appear as plain rectangles.  All list ite
     1. The photo/image disappears, and this portion of the component reverts to its initial state (blank/"undefined").
 
     2. Any "active" list item will be considered "inactive" and will change to standard size while remaining in "unhide" mode.
+![allunhidenoneactive](https://user-images.githubusercontent.com/76451364/227739923-db1b0cfa-a09e-4977-ab4a-706fd4075e80.png)
 
 Several actions happen with one click, which makes it simpler to use, I think.  And it's a fun way to do a list reveal!
 
