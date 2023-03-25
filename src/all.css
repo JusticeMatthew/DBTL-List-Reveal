@@ -25,12 +25,18 @@ body {
     background-color: none;
     width: 96vw;
     height: 60vh;
-    display: flex;
-    flex-direction: row;
     position: absolute;
     top: 18.5vh;
     left: 1.75vw;
-    justify-content: space-around;
+    display: flex;
+}
+
+#open-logo {
+    width: auto;
+    max-width: 96vw;
+    height: auto;
+    max-height: 60vh;
+    margin: auto;
 }
 
 .list-modular {

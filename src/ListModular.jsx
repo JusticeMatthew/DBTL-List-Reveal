@@ -156,7 +156,7 @@ export function ListModular() {
             { openingScreenVisible == "YES"
                 ?
                 <div className="open-modular">
-                    <img src={wmlogo} onClick={makeListsVisible} />
+                    <img id="open-logo" src={wmlogo} onClick={makeListsVisible} />
                 </div>
                 :
                 <div className="list-modular">
