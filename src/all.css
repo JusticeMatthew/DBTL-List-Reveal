@@ -1,0 +1,117 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.head-logo-modular {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+}
+
+.head-logo-modular h1 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    font-size: 8vh;
+    color: black;
+    margin: 0;
+    line-height: 105%;
+}
+
+.open-modular {
+    background-color: none;
+    width: 96vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 18.5vh;
+    left: 1.75vw;
+    justify-content: space-around;
+}
+
+.list-modular {
+    background-color: white;
+    width: 96vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 18.5vh;
+    left: 1.75vw;
+    border: .25vw solid darkgray;
+    border-radius: 2vw;
+    justify-content: space-around;
+}
+
+.featured-match {
+    width: 45vw;
+    height: 60vh;
+    background-image: url("./art/wmlogo.png");
+    background-size: 46.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#featured-image {
+    width: 48vw;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 1.25vh 2.25vh black;
+}
+
+#spotlight {
+    width: 64vw;
+    height: 48vh;
+    margin: -21.5vh 0 0 -9.5vw;
+}
+
+.single-list {
+    width: 21.5vw;
+    height: 58vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-name {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:2.5vh;
+    letter-spacing: 1px;
+    margin-top: 1vh;
+    color: black;
+    font-style: italic;
+}
+
+.list-item {
+    width: 21.5vw;
+    height: auto;
+    min-height: 8vh;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5vh;
+    font-weight: 600;
+    background-color: gray;
+    padding: auto 1vw;
+    margin: auto;
+}
+
+#hide {
+    color: gray;
+}
+
+#unhide {
+    color: black;
+    background-color: aliceblue;
+}
