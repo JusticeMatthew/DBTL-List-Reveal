@@ -62,6 +62,10 @@ body {
     background-position: center;
 }
 
+#null-image {
+    box-shadow: none;
+}
+
 #featured-image {
     width: 48vw;
     height: auto;

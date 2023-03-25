@@ -22,7 +22,7 @@ export function ListModular() {
     const [styleD4, setStyleD4] = useState("hide");
     const [styleD5, setStyleD5] = useState("hide");
 
-    const [matchImage, setMatchImage] = useState();
+    const [matchImage, setMatchImage] = useState(null);
 
     const [active, setActive] = useState("");
 
@@ -36,7 +36,7 @@ export function ListModular() {
         }
         else {
             setStyleJ1("hide");
-            if (matchImage == J1[1]) { setMatchImage(); setActive("") }
+            if (matchImage == J1[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -48,7 +48,7 @@ export function ListModular() {
         }
         else {
             setStyleJ2("hide");
-            if (matchImage == J2[1]) { setMatchImage(); setActive("") }
+            if (matchImage == J2[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -60,7 +60,7 @@ export function ListModular() {
         }
         else {
             setStyleJ3("hide");
-            if (matchImage == J3[1]) { setMatchImage(); setActive("") }
+            if (matchImage == J3[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -72,7 +72,7 @@ export function ListModular() {
         }
         else {
             setStyleJ4("hide");
-            if (matchImage == J4[1]) { setMatchImage(); setActive("") }
+            if (matchImage == J4[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -84,7 +84,7 @@ export function ListModular() {
         }
         else {
             setStyleJ5("hide");
-            if (matchImage == J5[1]) { setMatchImage(); setActive("") }
+            if (matchImage == J5[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -96,7 +96,7 @@ export function ListModular() {
         }
         else {
             setStyleD1("hide");
-            if (matchImage == D1[1]) { setMatchImage(); setActive("") }
+            if (matchImage == D1[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -108,7 +108,7 @@ export function ListModular() {
         }
         else {
             setStyleD2("hide");
-            if (matchImage == D2[1]) { setMatchImage(); setActive("") }
+            if (matchImage == D2[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -120,7 +120,7 @@ export function ListModular() {
         }
         else {
             setStyleD3("hide");
-            if (matchImage == D3[1]) { setMatchImage(); setActive("") }
+            if (matchImage == D3[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -132,7 +132,7 @@ export function ListModular() {
         }
         else {
             setStyleD4("hide");
-            if (matchImage == D4[1]) { setMatchImage(); setActive("") }
+            if (matchImage == D4[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -144,7 +144,7 @@ export function ListModular() {
         }
         else {
             setStyleD5("hide");
-            if (matchImage == D5[1]) { setMatchImage(); setActive("") }
+            if (matchImage == D5[1]) { setMatchImage(null); setActive("") }
         }
     }
 
@@ -220,7 +220,10 @@ export function ListModular() {
                     </div>
 
                     <div className="featured-match">
-                        <img id="featured-image" src={matchImage} onClick={resetImage} />
+                        { matchImage == null
+                            ? <img id="null-image" />
+                            : <img id="featured-image" src={matchImage} onClick={resetImage}  />
+                        }
                         <img id="spotlight" src={spotlight} />
                     </div>
 

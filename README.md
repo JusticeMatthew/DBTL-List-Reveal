@@ -27,22 +27,32 @@ The one-page app begins with the headline text on top and bottom.  The top is ce
 The five list tems in each list should appear as plain rectangles.  All list items begin in "hide" mode, with the text invisible (it's there, but it's the same color as the background).
 
 2. If you click on a list item that's in "hide" mode:
+
     a. The text in that list item will become visible ("unhide" mode).
+
     b. The photo/image associated with that list item will appear in the center.
+
     c. This list item will be the "active" item and will appear larger.
+
         i. If a list item in "unhide" mode in the opposite list matches the active item, then each list item will appear larger.
+
         ii. All other "unhide" list items will be considered "inactive" and will change to standard size while remaining in "unhide" mode.
 
 3. If you click on a list item that's in "unhide" mode:
+
     a. The list item reverts to its initial state of "hide" mode.
+
     b. The photo/image disappears, and this portion of the component reverts to its initial state (blank/"undefined").
+
     c. If this list item was also the "active" item, then no item will be considered "active."
 
 4. If you click on the photo/image in the center of the component:
+
     a. The photo/image disappears, and this portion of the component reverts to its initial state (blank/"undefined").
+
     b. Any "active" list item will be considered "inactive" and will change to standard size while remaining in "unhide" mode.
 
-Pretty simple, but a fun way to do a list!  Several actions happen with one click, which makes it simpler to use, I think.
+Several actions happen with one click, which makes it simpler to use, I think.  And it's a fun way to do a list reveal!
 
 # This Is My First App . . .
 
