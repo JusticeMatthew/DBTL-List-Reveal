@@ -81,6 +81,8 @@ body {
 #spotlight {
     width: 64vw;
     height: 48vh;
+    position: absolute;
+    top: 0;
     margin: -21.5vh 0 0 -9.5vw;
 }
 
