@@ -1,8 +1,6 @@
 import { useState } from "react";
 import wmlogo from "./art/wmlogo.png";
 import spotlight from "./art/spotlight.png";
-// import { J1, J2, J3, J4, J5 } from "./testdataJohn.js";
-// import { D1, D2, D3, D4, D5 } from "./testdataDom.js";
 import { J1, J2, J3, J4, J5 } from "./dataJohn.js";
 import { D1, D2, D3, D4, D5 } from "./dataDom.js";
 import "./all.css";
