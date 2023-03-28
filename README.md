@@ -14,11 +14,11 @@ This is a Vite app using React and lots of CSS.  Most of the code is in ListModu
 
 Now for the real fun!
 
-If you do an . . .
+If you do clone the repo locally and install the dependencies, you can do . . .
 
 npm run dev
 
-. . . from the terminal in the project folder, the app will launch in a localhost port.  The app works best when it's in full-screen mode in a 16:9 aspect ratio, though it also works as narrow as 12:9 (4:3), or as wide as 18:9 (2:1)
+. . . from the terminal in the project folder, and the app will launch in a localhost port.  The app works best when it's in full-screen mode in a 16:9 aspect ratio, though it also works as narrow as 12:9 (4:3), or as wide as 20:9.
 
 ⭐️ The one-page app begins with the headline text on top and bottom.  The top is cenetered (because of a spotlight graphic that will apear later), while the bottom is flush left to accomodate the picture-in-picture in the lower right corner for the livestream videoconferencing platform (we used Restream).
 ### ![image](https://user-images.githubusercontent.com/76451364/227739747-ccd2778c-de5b-4859-873d-d42c62f70731.png)
