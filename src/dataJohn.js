@@ -10,17 +10,17 @@ import SIX_WOMEN_TAG from "./art/6WOMEN_TAG.png";
 import THEORY_CENA from "./art/THEORY_CENA.png";
 import USOS_SAMI_KO from "./art/USOS_SAMI_KO.png";
 
-const a = ["Roman Reigns (c) vs. Cody Rhodes", ROMAN_CODY, "A"];
-const b = ["Austin Theory (c) vs. John Cena", THEORY_CENA, "B"];
-const c = ["Seth Rollins vs. Logan Paul", ROLLINS_PAUL, "C"];
-const d = ["Charlotte Flair (c) vs. Rhea Ripley", CHARLOTTE_RHEA, "D"];
-const e = ["Bianca Belair (c) vs. Asuka", BIANCA_ASUKA, "E"];
-const f = ["Becky Lynch, Lita & Trish Stratus vs. Damage CTRL", SIX_WOMEN_TAG, "F"];
-const g = ["Brock Lesnar vs. Omos", BROCK_OMOS, "G"];
-const h = ["Edge vs. Finn Bálor", EDGE_FINN, "H"];
-const i = ["Gunther (c) vs. Drew McIntyre vs. Sheamus", IC, "I"];
-const j = ["The Usos (c) vs. Sami Zayn & Kevin Owens", USOS_SAMI_KO, "J"];
-const k = ["Rey Mysterio vs. Dominik Mysterio", MYSTERIOS, "K"];
+const a = ["Roman Reigns (c) vs. Cody Rhodes", ROMAN_CODY, "A", "hide"];
+const b = ["Austin Theory (c) vs. John Cena", THEORY_CENA, "B", "hide"];
+const c = ["Seth Rollins vs. Logan Paul", ROLLINS_PAUL, "C", "hide"];
+const d = ["Charlotte Flair (c) vs. Rhea Ripley", CHARLOTTE_RHEA, "D", "hide"];
+const e = ["Bianca Belair (c) vs. Asuka", BIANCA_ASUKA, "E", "hide"];
+const f = ["Becky Lynch, Lita & Trish Stratus vs. Damage CTRL", SIX_WOMEN_TAG, "F", "hide"];
+const g = ["Brock Lesnar vs. Omos", BROCK_OMOS, "G", "hide"];
+const h = ["Edge vs. Finn Bálor", EDGE_FINN, "H", "hide"];
+const i = ["Gunther (c) vs. Drew McIntyre vs. Sheamus", IC, "I", "hide"];
+const j = ["The Usos (c) vs. Sami Zayn & Kevin Owens", USOS_SAMI_KO, "J", "hide"];
+const k = ["Rey Mysterio vs. Dominik Mysterio", MYSTERIOS, "K", "hide"];
 
 const Llabel = ["John's List:"];
 const L1 = a;
