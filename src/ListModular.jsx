@@ -1,13 +1,10 @@
 import { useState } from "react";
-import wmlogo from "./art/wmlogo.png";
 import spotlight from "./art/spotlight.png";
 import { J1, J2, J3, J4, J5 } from "./dataJohn.js";
 import { D1, D2, D3, D4, D5 } from "./dataDom.js";
 import "./all.css";
 
 export function ListModular() {
-    const [openingScreenVisible, setOpeningScreenVisible] = useState("YES");
-
     const [styleJ1, setStyleJ1] = useState("hide");
     const [styleJ2, setStyleJ2] = useState("hide");
     const [styleJ3, setStyleJ3] = useState("hide");
@@ -24,8 +21,6 @@ export function ListModular() {
 
     const [active, setActive] = useState("");
 
-    const makeListsVisible = () => { setOpeningScreenVisible("") }
-    
     const changeStyleJ1 = () => {
         if (styleJ1 == "hide") {
             setStyleJ1("unhide");
@@ -149,133 +144,122 @@ export function ListModular() {
     const resetImage = () => { setMatchImage(); setActive("") }
 
     return (
-        <div>
+        <div className="list-modular">
+            <div className="single-list">
+                <div className="list-name">John's List:</div>
+                <button
+                    className={"list-item " + styleJ1}
+                    onClick={changeStyleJ1}
+                    id={ (String(active).valueOf() == String(J1[2]).valueOf())
+                        && (styleJ1 == "unhide")
+                        ? "active-left"
+                        : "" }
+                >
+                    1. {J1[0]}
+                </button>
+                <button
+                    className={"list-item " + styleJ2}
+                    onClick={changeStyleJ2}
+                    id={ (String(active).valueOf() == String(J2[2]).valueOf())
+                        && (styleJ2 == "unhide")
+                        ? "active-left"
+                        : "" }
+                >
+                    2. {J2[0]}
+                </button>
+                <button
+                    className={"list-item " + styleJ3}
+                    onClick={changeStyleJ3}
+                    id={ (String(active).valueOf() == String(J3[2]).valueOf())
+                        && (styleJ3 == "unhide")
+                        ? "active-left"
+                        : "" }
+                >
+                    3. {J3[0]}
+                </button>
+                <button
+                    className={"list-item " + styleJ4 }
+                    onClick={changeStyleJ4}
+                    id={ (String(active).valueOf() == String(J4[2]).valueOf())
+                        && (styleJ4 == "unhide")
+                        ? "active-left"
+                        : "" }
+                >
+                    4. {J4[0]}
+                </button>
+                <button
+                    className={"list-item " + styleJ5}
+                    onClick={changeStyleJ5}
+                    id={ (String(active).valueOf() == String(J5[2]).valueOf())
+                        && (styleJ5 == "unhide")
+                        ? "active-left"
+                        : "" }
+                >
+                    5. {J5[0]}
+                </button>
+            </div>
 
-            { openingScreenVisible == "YES"
-                ?
-                <div className="open-modular">
-                    <img id="open-logo" src={wmlogo} onClick={makeListsVisible} />
-                </div>
-                :
-                <div className="list-modular">
-                    <div className="single-list">
-                        <div className="list-name">John's List:</div>
-                        <button
-                            className={"list-item " + styleJ1}
-                            onClick={changeStyleJ1}
-                            id={ (String(active).valueOf() == String(J1[2]).valueOf())
-                                && (styleJ1 == "unhide")
-                                ? "active-left"
-                                : "" }
-                        >
-                            1. {J1[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleJ2}
-                            onClick={changeStyleJ2}
-                            id={ (String(active).valueOf() == String(J2[2]).valueOf())
-                                && (styleJ2 == "unhide")
-                                ? "active-left"
-                                : "" }
-                        >
-                            2. {J2[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleJ3}
-                            onClick={changeStyleJ3}
-                            id={ (String(active).valueOf() == String(J3[2]).valueOf())
-                                && (styleJ3 == "unhide")
-                                ? "active-left"
-                                : "" }
-                        >
-                            3. {J3[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleJ4 }
-                            onClick={changeStyleJ4}
-                            id={ (String(active).valueOf() == String(J4[2]).valueOf())
-                                && (styleJ4 == "unhide")
-                                ? "active-left"
-                                : "" }
-                        >
-                            4. {J4[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleJ5}
-                            onClick={changeStyleJ5}
-                            id={ (String(active).valueOf() == String(J5[2]).valueOf())
-                                && (styleJ5 == "unhide")
-                                ? "active-left"
-                                : "" }
-                        >
-                            5. {J5[0]}
-                        </button>
-                    </div>
+            <div className="featured-match">
+                { matchImage == null
+                    ? <img id="null-image" />
+                    : <img id="featured-image" src={matchImage} onClick={resetImage}  />
+                }
+                <img id="spotlight" src={spotlight} />
+            </div>
 
-                    <div className="featured-match">
-                        { matchImage == null
-                            ? <img id="null-image" />
-                            : <img id="featured-image" src={matchImage} onClick={resetImage}  />
-                        }
-                        <img id="spotlight" src={spotlight} />
-                    </div>
-
-                    <div className="single-list">
-                        <div className="list-name">Dom's List:</div>
-                        <button
-                            className={"list-item " + styleD1 }
-                            onClick={changeStyleD1}
-                            id={ (String(active).valueOf() == String(D1[2]).valueOf())
-                                && (styleD1 == "unhide")
-                                ? "active-right"
-                                : "" }
-                        >
-                            1. {D1[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleD2}
-                            onClick={changeStyleD2}
-                            id={ (String(active).valueOf() == String(D2[2]).valueOf())
-                                && (styleD2 == "unhide")
-                                ? "active-right"
-                                : "" }
-                        >
-                            2. {D2[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleD3}
-                            onClick={changeStyleD3}
-                            id={ (String(active).valueOf() == String(D3[2]).valueOf())
-                                && (styleD3 == "unhide")
-                                ? "active-right"
-                                : "" }
-                        >
-                            3. {D3[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleD4}
-                            onClick={changeStyleD4}
-                            id={ (String(active).valueOf() == String(D4[2]).valueOf())
-                                && (styleD4 == "unhide")
-                                ? "active-right"
-                                : "" }
-                        >
-                            4. {D4[0]}
-                        </button>
-                        <button
-                            className={"list-item " + styleD5}
-                            onClick={changeStyleD5}
-                            id={ (String(active).valueOf() == String(D5[2]).valueOf())
-                                && (styleD5 == "unhide")
-                                ? "active-right"
-                                : "" }
-                        >
-                            5. {D5[0]}
-                        </button>
-                    </div>
-                </div>
-            }
-        
+            <div className="single-list">
+                <div className="list-name">Dom's List:</div>
+                <button
+                    className={"list-item " + styleD1 }
+                    onClick={changeStyleD1}
+                    id={ (String(active).valueOf() == String(D1[2]).valueOf())
+                        && (styleD1 == "unhide")
+                        ? "active-right"
+                        : "" }
+                >
+                    1. {D1[0]}
+                </button>
+                <button
+                    className={"list-item " + styleD2}
+                    onClick={changeStyleD2}
+                    id={ (String(active).valueOf() == String(D2[2]).valueOf())
+                        && (styleD2 == "unhide")
+                        ? "active-right"
+                        : "" }
+                >
+                    2. {D2[0]}
+                </button>
+                <button
+                    className={"list-item " + styleD3}
+                    onClick={changeStyleD3}
+                    id={ (String(active).valueOf() == String(D3[2]).valueOf())
+                        && (styleD3 == "unhide")
+                        ? "active-right"
+                        : "" }
+                >
+                    3. {D3[0]}
+                </button>
+                <button
+                    className={"list-item " + styleD4}
+                    onClick={changeStyleD4}
+                    id={ (String(active).valueOf() == String(D4[2]).valueOf())
+                        && (styleD4 == "unhide")
+                        ? "active-right"
+                        : "" }
+                >
+                    4. {D4[0]}
+                </button>
+                <button
+                    className={"list-item " + styleD5}
+                    onClick={changeStyleD5}
+                    id={ (String(active).valueOf() == String(D5[2]).valueOf())
+                        && (styleD5 == "unhide")
+                        ? "active-right"
+                        : "" }
+                >
+                    5. {D5[0]}
+                </button>
+            </div>
         </div>
     )
 }
