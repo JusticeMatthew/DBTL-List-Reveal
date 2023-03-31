@@ -7,8 +7,6 @@ function App() {
 
   const [openingScreenVisible, setOpeningScreenVisible] = useState("YES");
 
-  const makeListsVisible = () => { setOpeningScreenVisible("") }
-
   return (
     <div style={{ backgroundColor: "#f0f0f0", height: "99vh" }}>
 
@@ -21,7 +19,7 @@ function App() {
         { openingScreenVisible == "YES"
           ?
           <div className="open-modular">
-              <img id="open-logo" src={wmlogo} onClick={makeListsVisible} />
+              <img id="open-logo" src={wmlogo} onClick={() => { setOpeningScreenVisible("") }} />
           </div>
           : <ListModular />
         }

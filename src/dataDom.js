@@ -22,8 +22,11 @@ const i = ["Gunther (c) vs. Drew McIntyre vs. Sheamus", IC, "I"];
 const j = ["The Usos (c) vs. Sami Zayn & Kevin Owens", USOS_SAMI_KO, "J"];
 const k = ["Rey Mysterio vs. Dominik Mysterio", MYSTERIOS, "K"];
 
-export const D1 = j;
-export const D2 = d;
-export const D3 = a;
-export const D4 = i;
-export const D5 = e;
+const Rlabel = ["Dom's List:"];
+const R1 = j;
+const R2 = d;
+const R3 = a;
+const R4 = i;
+const R5 = e;
+
+export const listR = [Rlabel, R1, R2, R3, R4, R5];

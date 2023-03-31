@@ -1,138 +1,136 @@
 import { useState } from "react";
 import spotlight from "./art/spotlight.png";
-import { J1, J2, J3, J4, J5 } from "./dataJohn.js";
-import { D1, D2, D3, D4, D5 } from "./dataDom.js";
+import { listL } from "./dataJohn.js";
+import { listR } from "./dataDom.js";
 import "./all.css";
 
 export function ListModular() {
-    const [styleJ1, setStyleJ1] = useState("hide");
-    const [styleJ2, setStyleJ2] = useState("hide");
-    const [styleJ3, setStyleJ3] = useState("hide");
-    const [styleJ4, setStyleJ4] = useState("hide");
-    const [styleJ5, setStyleJ5] = useState("hide");
+    const [styleL1, setStyleL1] = useState("hide");
+    const [styleL2, setStyleL2] = useState("hide");
+    const [styleL3, setStyleL3] = useState("hide");
+    const [styleL4, setStyleL4] = useState("hide");
+    const [styleL5, setStyleL5] = useState("hide");
 
-    const [styleD1, setStyleD1] = useState("hide");
-    const [styleD2, setStyleD2] = useState("hide");
-    const [styleD3, setStyleD3] = useState("hide");
-    const [styleD4, setStyleD4] = useState("hide");
-    const [styleD5, setStyleD5] = useState("hide");
+    const [styleR1, setStyleR1] = useState("hide");
+    const [styleR2, setStyleR2] = useState("hide");
+    const [styleR3, setStyleR3] = useState("hide");
+    const [styleR4, setStyleR4] = useState("hide");
+    const [styleR5, setStyleR5] = useState("hide");
 
     const [matchImage, setMatchImage] = useState(null);
 
     const [active, setActive] = useState("");
 
-    const resetImage = () => { setMatchImage(); setActive("") }
-
     return (
         <div className="list-modular">
             <div className="single-list">
-                <div className="list-name">John's List:</div>
+                <div className="list-name">{listL[0][0]}</div>
                 <button 
-                    className={"list-item " + styleJ1}
+                    className={"list-item " + styleL1}
                     onClick={() => {
-                        if (styleJ1 == "hide") {
-                            setStyleJ1("unhide");
-                            if (matchImage != J1[1]) { setMatchImage(J1[1]) };
-                            setActive(J1[2])
+                        if (styleL1 == "hide") {
+                            setStyleL1("unhide");
+                            if (matchImage != listL[1][1]) { setMatchImage(listL[1][1]) };
+                            setActive(listL[1][2])
                         }
                         else {
-                            setStyleJ1("hide");
-                            if (matchImage == J1[1]) { setMatchImage(null); setActive("") }
+                            setStyleL1("hide");
+                            if (matchImage == listL[1][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(J1[2]).valueOf())
-                        && (styleJ1 == "unhide")
+                    id={ (String(active).valueOf() == String(listL[1][2]).valueOf())
+                        && (styleL1 == "unhide")
                         ? "active-left"
                         : "" }
                 >
-                    1. {J1[0]}
+                    1. {listL[1][0]}
                 </button>
                 <button
-                    className={"list-item " + styleJ2}
+                    className={"list-item " + styleL2}
                     onClick={() => {
-                        if (styleJ2 == "hide") {
-                            setStyleJ2("unhide");
-                            if (matchImage != J2[1]) { setMatchImage(J2[1]) };
-                            setActive(J2[2])
+                        if (styleL2 == "hide") {
+                            setStyleL2("unhide");
+                            if (matchImage != listL[2][1]) { setMatchImage(listL[2][1]) };
+                            setActive(listL[2][2])
                         }
                         else {
-                            setStyleJ2("hide");
-                            if (matchImage == J2[1]) { setMatchImage(null); setActive("") }
+                            setStyleL2("hide");
+                            if (matchImage == listL[2][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(J2[2]).valueOf())
-                        && (styleJ2 == "unhide")
+                    id={ (String(active).valueOf() == String(listL[2][2]).valueOf())
+                        && (styleL2 == "unhide")
                         ? "active-left"
                         : "" }
                 >
-                    2. {J2[0]}
+                    2. {listL[2][0]}
                 </button>
                 <button
-                    className={"list-item " + styleJ3}
+                    className={"list-item " + styleL3}
                     onClick={() => {
-                        if (styleJ3 == "hide") {
-                            setStyleJ3("unhide");
-                            if (matchImage != J3[1]) { setMatchImage(J3[1]) };
-                            setActive(J3[2])
+                        if (styleL3 == "hide") {
+                            setStyleL3("unhide");
+                            if (matchImage != listL[3][1]) { setMatchImage(listL[3][1]) };
+                            setActive(listL[3][2])
                         }
                         else {
-                            setStyleJ3("hide");
-                            if (matchImage == J3[1]) { setMatchImage(null); setActive("") }
+                            setStyleL3("hide");
+                            if (matchImage == listL[3][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(J3[2]).valueOf())
-                        && (styleJ3 == "unhide")
+                    id={ (String(active).valueOf() == String(listL[3][2]).valueOf())
+                        && (styleL3 == "unhide")
                         ? "active-left"
                         : "" }
                 >
-                    3. {J3[0]}
+                    3. {listL[3][0]}
                 </button>
                 <button
-                    className={"list-item " + styleJ4 }
+                    className={"list-item " + styleL4 }
                     onClick={() => {
-                        if (styleJ4 == "hide") {
-                            setStyleJ4("unhide");
-                            if (matchImage != J4[1]) { setMatchImage(J4[1]) };
-                            setActive(J4[2])
+                        if (styleL4 == "hide") {
+                            setStyleL4("unhide");
+                            if (matchImage != listL[4][1]) { setMatchImage(listL[4][1]) };
+                            setActive(listL[4][2])
                         }
                         else {
-                            setStyleJ4("hide");
-                            if (matchImage == J4[1]) { setMatchImage(null); setActive("") }
+                            setStyleL4("hide");
+                            if (matchImage == listL[4][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(J4[2]).valueOf())
-                        && (styleJ4 == "unhide")
+                    id={ (String(active).valueOf() == String(listL[4][2]).valueOf())
+                        && (styleL4 == "unhide")
                         ? "active-left"
                         : "" }
                 >
-                    4. {J4[0]}
+                    4. {listL[4][0]}
                 </button>
                 <button
-                    className={"list-item " + styleJ5}
+                    className={"list-item " + styleL5}
                     onClick={() => {
-                        if (styleJ5 == "hide") {
-                            setStyleJ5("unhide");
-                            if (matchImage != J5[1]) { setMatchImage(J5[1]) };
-                            setActive(J5[2])
+                        if (styleL5 == "hide") {
+                            setStyleL5("unhide");
+                            if (matchImage != listL[5][1]) { setMatchImage(listL[5][1]) };
+                            setActive(listL[5][2])
                         }
                         else {
-                            setStyleJ5("hide");
-                            if (matchImage == J5[1]) { setMatchImage(null); setActive("") }
+                            setStyleL5("hide");
+                            if (matchImage == listL[5][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(J5[2]).valueOf())
-                        && (styleJ5 == "unhide")
+                    id={ (String(active).valueOf() == String(listL[5][2]).valueOf())
+                        && (styleL5 == "unhide")
                         ? "active-left"
                         : "" }
                 >
-                    5. {J5[0]}
+                    5. {listL[5][0]}
                 </button>
             </div>
 
             <div className="featured-match">
                 { matchImage == null
                     ? <img id="null-image" />
-                    : <img id="featured-image" src={matchImage} onClick={resetImage}  />
+                    : <img id="featured-image" src={matchImage} onClick={() => { setMatchImage(); setActive("") }}  />
                 }
                 <img id="spotlight" src={spotlight} />
             </div>
@@ -140,104 +138,104 @@ export function ListModular() {
             <div className="single-list">
                 <div className="list-name">Dom's List:</div>
                 <button
-                    className={"list-item " + styleD1 }
+                    className={"list-item " + styleR1 }
                     onClick={() => {
-                        if (styleD1 == "hide") {
-                            setStyleD1("unhide");
-                            if (matchImage != D1[1]) { setMatchImage(D1[1]) };
-                            setActive(D1[2])
+                        if (styleR1 == "hide") {
+                            setStyleR1("unhide");
+                            if (matchImage != listR[1][1]) { setMatchImage(listR[1][1]) };
+                            setActive(listR[1][2])
                         }
                         else {
-                            setStyleD1("hide");
-                            if (matchImage == D1[1]) { setMatchImage(null); setActive("") }
+                            setStyleR1("hide");
+                            if (matchImage == listR[1][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(D1[2]).valueOf())
-                        && (styleD1 == "unhide")
+                    id={ (String(active).valueOf() == String(listR[1][2]).valueOf())
+                        && (styleR1 == "unhide")
                         ? "active-right"
                         : "" }
                 >
-                    1. {D1[0]}
+                    1. {listR[1][0]}
                 </button>
                 <button
-                    className={"list-item " + styleD2}
+                    className={"list-item " + styleR2}
                     onClick={() => {
-                        if (styleD2 == "hide") {
-                            setStyleD2("unhide");
-                            if (matchImage != D2[1]) { setMatchImage(D2[1]) };
-                            setActive(D2[2])
+                        if (styleR2 == "hide") {
+                            setStyleR2("unhide");
+                            if (matchImage != listR[2][1]) { setMatchImage(listR[2][1]) };
+                            setActive(listR[2][2])
                         }
                         else {
-                            setStyleD2("hide");
-                            if (matchImage == D2[1]) { setMatchImage(null); setActive("") }
+                            setStyleR2("hide");
+                            if (matchImage == listR[2][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(D2[2]).valueOf())
-                        && (styleD2 == "unhide")
+                    id={ (String(active).valueOf() == String(listR[2][2]).valueOf())
+                        && (styleR2 == "unhide")
                         ? "active-right"
                         : "" }
                 >
-                    2. {D2[0]}
+                    2. {listR[2][0]}
                 </button>
                 <button
-                    className={"list-item " + styleD3}
+                    className={"list-item " + styleR3}
                     onClick={() => {
-                        if (styleD3 == "hide") {
-                            setStyleD3("unhide");
-                            if (matchImage != D3[1]) { setMatchImage(D3[1]) };
-                            setActive(D3[2])
+                        if (styleR3 == "hide") {
+                            setStyleR3("unhide");
+                            if (matchImage != listR[3][1]) { setMatchImage(listR[3][1]) };
+                            setActive(listR[3][2])
                         }
                         else {
-                            setStyleD3("hide");
-                            if (matchImage == D3[1]) { setMatchImage(null); setActive("") }
+                            setStyleR3("hide");
+                            if (matchImage == listR[3][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(D3[2]).valueOf())
-                        && (styleD3 == "unhide")
+                    id={ (String(active).valueOf() == String(listR[3][2]).valueOf())
+                        && (styleR3 == "unhide")
                         ? "active-right"
                         : "" }
                 >
-                    3. {D3[0]}
+                    3. {listR[3][0]}
                 </button>
                 <button
-                    className={"list-item " + styleD4}
+                    className={"list-item " + styleR4}
                     onClick={() => {
-                        if (styleD4 == "hide") {
-                            setStyleD4("unhide");
-                            if (matchImage != D4[1]) { setMatchImage(D4[1]) };
-                            setActive(D4[2])
+                        if (styleR4 == "hide") {
+                            setStyleR4("unhide");
+                            if (matchImage != listR[4][1]) { setMatchImage(listR[4][1]) };
+                            setActive(listR[4][2])
                         }
                         else {
-                            setStyleD4("hide");
-                            if (matchImage == D4[1]) { setMatchImage(null); setActive("") }
+                            setStyleR4("hide");
+                            if (matchImage == listR[4][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(D4[2]).valueOf())
-                        && (styleD4 == "unhide")
+                    id={ (String(active).valueOf() == String(listR[4][2]).valueOf())
+                        && (styleR4 == "unhide")
                         ? "active-right"
                         : "" }
                 >
-                    4. {D4[0]}
+                    4. {listR[4][0]}
                 </button>
                 <button
-                    className={"list-item " + styleD5}
+                    className={"list-item " + styleR5}
                     onClick={() => {
-                        if (styleD5 == "hide") {
-                            setStyleD5("unhide");
-                            if (matchImage != D5[1]) { setMatchImage(D5[1]) };
-                            setActive(D5[2])
+                        if (styleR5 == "hide") {
+                            setStyleR5("unhide");
+                            if (matchImage != listR[5][1]) { setMatchImage(listR[5][1]) };
+                            setActive(listR[5][2])
                         }
                         else {
-                            setStyleD5("hide");
-                            if (matchImage == D5[1]) { setMatchImage(null); setActive("") }
+                            setStyleR5("hide");
+                            if (matchImage == listR[5][1]) { setMatchImage(null); setActive("") }
                         }
                     }}
-                    id={ (String(active).valueOf() == String(D5[2]).valueOf())
-                        && (styleD5 == "unhide")
+                    id={ (String(active).valueOf() == String(listR[5][2]).valueOf())
+                        && (styleR5 == "unhide")
                         ? "active-right"
                         : "" }
                 >
-                    5. {D5[0]}
+                    5. {listR[5][0]}
                 </button>
             </div>
         </div>
