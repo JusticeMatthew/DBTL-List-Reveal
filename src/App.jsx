@@ -1,7 +1,8 @@
 import { useState } from "react";
 import wmlogo from "./art/wmlogo.png";
-import "./all.css";
 import { ListModular } from "./ListModular";
+import "./all.css";
+
 
 function App() {
 

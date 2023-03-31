@@ -6,9 +6,7 @@ import "./all.css";
 
 export function ListModular() {
     const [matchImage, setMatchImage] = useState(null);
-
     const [active, setActive] = useState("");
-
     const [dummy, setDummy] = useState("");
     
     return (
@@ -26,8 +24,7 @@ export function ListModular() {
                                     setDummy(i.concat("a"));
                                     if (matchImage != item[1]) { setMatchImage(item[1]) };
                                     setActive(item[2]);
-                                }
-                                else {
+                                } else {
                                     item[3] = "hide";
                                     setDummy(i.concat("b"));
                                     if (matchImage == item[1]) { setMatchImage(null); setActive("") }
@@ -65,8 +62,7 @@ export function ListModular() {
                                     setDummy(i.concat("c"));
                                     if (matchImage != item[1]) { setMatchImage(item[1]) };
                                     setActive(item[2]);
-                                }
-                                else {
+                                } else {
                                     item[3] = "hide";
                                     setDummy(i.concat("d"));
                                     if (matchImage == item[1]) { setMatchImage(null); setActive("") }
