@@ -130,7 +130,7 @@ export function ListModular() {
             <div className="featured-match">
                 { matchImage == null
                     ? <img id="null-image" />
-                    : <img id="featured-image" src={matchImage} onClick={() => { setMatchImage(); setActive("") }}  />
+                    : <img id="featured-image" src={matchImage} onClick={() => { setMatchImage(null); setActive("") }}  />
                 }
                 <img id="spotlight" src={spotlight} />
             </div>
