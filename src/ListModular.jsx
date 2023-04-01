@@ -21,17 +21,17 @@ export function ListModular() {
                             onClick={() => {
                                 if (item[3] == "hide") {
                                     item[3] = "unhide";
-                                    setDummy(i.concat("a"));
+                                    setDummy(i.concat(L_R == "L" ? "a" : "z"));
                                     if (matchImage != item[1]) { setMatchImage(item[1]) };
                                     setActive(item[2]);
                                 } else {
                                     item[3] = "hide";
-                                    setDummy(i.concat("b"));
+                                    setDummy(i.concat(L_R == "L" ? "b" : "y"));
                                     if (matchImage == item[1]) { setMatchImage(null); setActive("") }
                                 }
                             }}
                             id={ (String(active).valueOf() == String(item[2]).valueOf())
-                                && (item[3] == "unhide") && dummy.length >= 0
+                                && (item[3] == "unhide")
                                 ? ((L_R == "L") ? "active-left" : "active-right")
                                 : "" }
                         >
