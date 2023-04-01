@@ -8,13 +8,13 @@ export function ListModular() {
     const [matchImage, setMatchImage] = useState(null);
     const [active, setActive] = useState("");
     const [dummy, setDummy] = useState("");
-    
-    return (
-        <div className="list-modular">
+
+    function ListSingle(arr, L_R) {
+        return (
             <div className="single-list">
-                <div className="list-name">{listL[0][0]}</div>
-                {listL.slice(1, listL.length).map(item => {
-                    const i = listL.indexOf(item).toString();
+                <div className="list-name">{arr[0][0]}</div>
+                {arr.slice(1, arr.length).map(item => {
+                    const i = arr.indexOf(item).toString();
                     return (
                         <button 
                             className={"list-item " + item[3]}
@@ -31,8 +31,8 @@ export function ListModular() {
                                 }
                             }}
                             id={ (String(active).valueOf() == String(item[2]).valueOf())
-                                && (item[3] == "unhide")
-                                ? "active-left"
+                                && (item[3] == "unhide") && dummy.length >= 0
+                                ? ((L_R == "L") ? "active-left" : "active-right")
                                 : "" }
                         >
                             {i}. {item[0]}
@@ -40,7 +40,12 @@ export function ListModular() {
                     )
                 }) }
             </div>
-
+        )
+    }
+    
+    return (
+        <div className="list-modular">
+            { ListSingle(listL, "L") }
             <div className="featured-match">
                 { matchImage == null && dummy.length >= 0
                     ? <img id="null-image" />
@@ -48,36 +53,7 @@ export function ListModular() {
                 }
                 <img id="spotlight" src={spotlight} />
             </div>
-
-            <div className="single-list">
-                <div className="list-name">{listR[0][0]}</div>
-                {listR.slice(1, listR.length).map(item => {
-                    const i = listR.indexOf(item).toString();
-                    return (
-                        <button 
-                            className={"list-item " + item[3]}
-                            onClick={() => {
-                                if (item[3] == "hide") {
-                                    item[3] = "unhide";
-                                    setDummy(i.concat("c"));
-                                    if (matchImage != item[1]) { setMatchImage(item[1]) };
-                                    setActive(item[2]);
-                                } else {
-                                    item[3] = "hide";
-                                    setDummy(i.concat("d"));
-                                    if (matchImage == item[1]) { setMatchImage(null); setActive("") }
-                                }
-                            }}
-                            id={ (String(active).valueOf() == String(item[2]).valueOf())
-                                && (item[3] == "unhide")
-                                ? "active-right"
-                                : "" }
-                        >
-                            {i}. {item[0]}
-                        </button>
-                    )
-                }) }
-            </div>
+            { ListSingle(listR, "R") }            
         </div>
     )
 }
