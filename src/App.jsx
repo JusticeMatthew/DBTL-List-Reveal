@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import wmlogo from './assets/wmlogo.png';
-import { ListModular } from './ListModular';
+// import { ListModular } from './ListModular';
 import './all.css';
 import NewList from './ListModular';
 
