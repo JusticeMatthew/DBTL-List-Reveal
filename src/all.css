@@ -29,6 +29,7 @@ body {
     top: 18.5vh;
     left: 1.75vw;
     display: flex;
+    z-index: 100;
 }
 
 #open-logo {

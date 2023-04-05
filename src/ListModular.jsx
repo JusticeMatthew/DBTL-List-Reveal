@@ -3,6 +3,42 @@ import spotlight from "./art/spotlight.png";
 import { listL } from "./dataJohn.js";
 import { listR } from "./dataDom.js";
 import "./all.css";
+import { data, picks } from './newData.js';
+
+const NewList = () => {
+    const [visible, setVisible] = useState({
+        0: true,
+        1: true,
+        2: true,
+        3: true,
+        4: true,
+    })
+    return (
+        <div className="list-modular">
+            <div className="single-list">
+            <div className="list-name">{data.name}</div>
+            {picks.map((pick, index) => (
+                <button
+                    key={index} 
+                    className={`list-item ${visible.key ? 'hide' : 'unhide'}`}
+                    onClick={() => setVisible({...visible, [index]: !index })}
+                >
+                    {console.log(visible.index)}
+                    {pick.title}
+                </button>
+            ))}
+            </div>
+            <div className="single-list">
+            <div className="list-name">{data.name}</div>
+            {picks.map((pick) => (
+                <button className="list-item">
+                    {pick.title}
+                </button>
+            ))}
+            </div>
+        </div>
+    )
+}
 
 export function ListModular() {
     const [matchImage, setMatchImage] = useState(null);
@@ -57,3 +93,5 @@ export function ListModular() {
         </div>
     )
 }
+
+export default NewList

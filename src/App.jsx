@@ -2,11 +2,12 @@ import { useState } from "react";
 import wmlogo from "./art/wmlogo.png";
 import { ListModular } from "./ListModular";
 import "./all.css";
+import NewList from "./ListModular";
 
 
 function App() {
 
-  const [openingScreenVisible, setOpeningScreenVisible] = useState("YES");
+  const [openingScreenVisible, setOpeningScreenVisible] = useState(true);
 
   return (
     <div style={{ backgroundColor: "#f0f0f0", height: "99vh" }}>
@@ -17,12 +18,12 @@ function App() {
       </div>
 
       <div>
-        { openingScreenVisible == "YES"
+        { openingScreenVisible
           ?
           <div className="open-modular">
-              <img id="open-logo" src={wmlogo} onClick={() => { setOpeningScreenVisible("") }} />
+              <img id="open-logo" src={wmlogo} onClick={() => { setOpeningScreenVisible(false) }} />
           </div>
-          : <ListModular />
+          : <NewList />
         }
       </div>
       
